@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.6">
+  <diagram name="Overall Architecture UML" id="0">
+    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Load Balancer (e.g., AWS ELB, NGINX)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d9e8fb;" parent="1" vertex="1">
+          <mxGeometry x="250" y="50" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Kubernetes Cluster (e.g., GKE, AKS)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#c8e6c9;" parent="1" vertex="1">
+          <mxGeometry x="200" y="150" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Node 1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#e3f2fd;" parent="1" vertex="1">
+          <mxGeometry x="180" y="140" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Node 2" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#e3f2fd;" parent="1" vertex="1">
+          <mxGeometry x="385" y="210" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Log Collection Agents (e.g., Fluentd, Logstash)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#fff9c4;" parent="1" vertex="1">
+          <mxGeometry x="200" y="300" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="ELK Stack (Elasticsearch, Logstash, Kibana)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffccbc;" parent="1" vertex="1">
+          <mxGeometry x="250" y="400" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Monitoring Tools (Prometheus, Grafana)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbdefb;" parent="1" vertex="1">
+          <mxGeometry x="500" y="150" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Security Tools (e.g., Vault, Falco)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffccbc;" parent="1" vertex="1">
+          <mxGeometry x="500" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Ingestion Layer (e.g., Kafka, RabbitMQ)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffe0b2;" parent="1" vertex="1">
+          <mxGeometry x="250" y="550" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="3" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="6" target="7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="3" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="3" target="12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" parent="1" source="7" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

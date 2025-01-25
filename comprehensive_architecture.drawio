@@ -1,0 +1,90 @@
+
+<mxfile host="app.diagrams.net">
+  <diagram name="Comprehensive Architecture">
+    <mxGraphModel dx="1680" dy="1240" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Load Balancer -->
+        <mxCell id="2" value="Load Balancer (e.g., AWS ELB, NGINX)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d9e8fb;" vertex="1" parent="1">
+          <mxGeometry x="400" y="50" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Kubernetes Cluster -->
+        <mxCell id="3" value="Kubernetes Cluster" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#c8e6c9;" vertex="1" parent="1">
+          <mxGeometry x="350" y="120" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Service A" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbdefb;" vertex="1" parent="1">
+          <mxGeometry x="370" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Service B" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbdefb;" vertex="1" parent="1">
+          <mxGeometry x="480" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Service C" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbdefb;" vertex="1" parent="1">
+          <mxGeometry x="590" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Message Queue -->
+        <mxCell id="7" value="Message Queue (e.g., Kafka, RabbitMQ)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffe0b2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="220" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Databases -->
+        <mxCell id="8" value="Cassandra (NoSQL)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#c8e6c9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="300" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="SQL Database" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#fbe9e7;" vertex="1" parent="1">
+          <mxGeometry x="510" y="300" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Monitoring -->
+        <mxCell id="10" value="Prometheus" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbdefb;" vertex="1" parent="1">
+          <mxGeometry x="150" y="120" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Grafana" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#bbdefb;" vertex="1" parent="1">
+          <mxGeometry x="150" y="180" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Tracing -->
+        <mxCell id="12" value="Zipkin" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffccbc;" vertex="1" parent="1">
+          <mxGeometry x="700" y="120" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Logging -->
+        <mxCell id="13" value="Splunk" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffccbc;" vertex="1" parent="1">
+          <mxGeometry x="700" y="180" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="Kibana (Logs)" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffccbc;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="7" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="7" target="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="3" target="10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="3" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="3" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="3" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
